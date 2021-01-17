@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert</title>
+
+    <style>
+        .container2{
+            background: #ccc;
+            padding: 15px;
+        }
+
+        .container2 p{
+            border: 1px solid seagreen;
+            padding: 10px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Teste DOM</h1>
+
+        <!-- beforebegin -->
+    <div class="container2">
+        <!-- afterbegin -->
+        <p>Paragrafo container2 01</p>
+        <p>Paragrafo container2 02</p>
+        <p>Paragrafo container2 03</p>
+        <!-- beforeend -->
+    </div>
+    <!-- afterend -->
+
+    <div class="container">
+        <p>teste 1</p>
+        <p>lorem <a href="#"> link </a> .</p>
+        <p>teste 2</p>
+
+        <h2>Lista</h2>
+        <ul>
+            <li>item 1</li>
+            <li>item 2
+                <ul>
+                    <li>item 2.a</li>
+                    <li>item 2.b</li>
+                    <li>item 2.c</li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>item <a href="#">link</a></li>
+        </ul>
+    </div>
+    <script>
+     const container2 = document.querySelector('.container2');
+
+    //  beforebegin, afterbegin, beforeend, afterend
+    //  Aceita tags HTML
+     container2.insertAdjacentHTML('beforebegin', '<b> texto inserido com beforebegin</b>');
+     container2.insertAdjacentHTML('afterbegin', '<b> texto inserido com afterbegin</b>');
+   
+      container2.insertAdjacentHTML('beforeend', '<b> texto inserido com beforeend</b>');
+      container2.insertAdjacentHTML('afterend', '<b> texto inserido com afterend</b>');
+
+    //insertAdjacentText
+    //Nao aceita tags HTML, apenas textos puros
+    container2.insertAdjacentText('afterend', '<b> texto inserido com afterend(insertAdjacentText)</b>');;
+ 
+    const em = document.createElement('em');
+    em.textContent = ' - texto com enfase - ';
+        container2.insertAdjacentElement('beforeend', em)
+    </script>
+    </body>

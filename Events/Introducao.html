@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao</title>
+
+    <style>
+        .container2{
+            background-color: #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+        <h1>Eventos</h1>
+        <div id='container'>
+           <button id='btn1'>Botao 1</button>
+           <button id='btn2'>Botao 2</button>
+           <button id='btn3'>Botao 3</button>
+        </div>  
+             <hr>
+                    <h1>Delegacao de eventos</h1>
+                    <div class='container2'>
+                      <button>Botao 1</button> 
+                      <button>Botao 2</button> 
+                      <button>Botao 3</button> 
+                    </div>
+
+
+
+  <script>
+    //SCRIPT: EVENTOS - CONTAINER
+    //DOM level 0: onclick=""
+    //DOM level 2: exemplo.addEventListener(evento, funcao, fase)
+
+    const btn1 = document.getElementById('btn1');
+    const btn2 = document.getElementById('btn2');
+    const btn3 = document.getElementById('btn3');
+
+    function clicou(){
+        console.log('click funcao clicou')
+    };
+
+    btn1.onclick = function(){
+        console.log('click btn1 funcao anonima'), false};
+    btn1.onclick = clicou;
+
+    btn2.addEventListener('click', clicou)
+    btn2.addEventListener('click', function(){
+      console.log('click funcao anonima')}, false)
+
+    btn3.addEventListener('click', function(evt){
+        console.log('clicou no btn3', evt); 
+        evt.stopPropagation()
+    }, false);
+
+    document.addEventListener('click', function(evt){
+        console.log('clicou no document')
+        console.log(evt.target)
+        console.log(evt.currentTarget)
+        console.log(this)
+    }, true);
+
+    const container = document.getElementById('container');
+    container.addEventListener('click', function(){
+        console.log('clicou no container')
+    }, false)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//SCRIPT: DELEGACAO DE EVENTOS - CONTAINER2
+const container2 = document.querySelector('.container2');
+const btnS = document.querySelectorAll('.container2 button');
+
+//Maneira colocando os eventos em cada botao(nao ideal caso houver muitos botoes) 
+//  [...btnS].forEach(btn => btn.addEventListener('click', function(evt){
+//      evt.stopPropagation()
+//      console.log(evt.target)
+//  }));
+ 
+//Maneira mais otimizada colocando o evento direto no container 
+ container2.addEventListener('click', function(evt){
+     evt.stopPropagation()
+     console.log(evt.target)
+     console.log(evt.currentTarget)
+     console.log(this)
+     if(evt.target.nodeName === 'BUTTON'){
+        //  console.log(evt.target)
+    }
+ }); 
+
+  </script>
+</body>
+</html>

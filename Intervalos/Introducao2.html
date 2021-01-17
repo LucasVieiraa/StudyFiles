@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    setTimeout(function(){
+        console.log('timeout depois de 2000ms')
+    }, 2000)    
+
+
+        let x = 0
+        const intervalo = setInterval(() => {
+            console.log('contador segundos: ', x++)
+            if(x > 15)clearInterval(intervalo)
+            
+        }, 1000)
+
+
+    
+    
+
+
+    </script>
+</body>
+</html>

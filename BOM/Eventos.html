@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Teste HTML</h1>
+    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/X_Reasons_to_learn_Javascript.jpg" alt="">
+    <br>
+    <a href="History.html">Vai para o History.html</a>
+    <script>
+
+    window.addEventListener('load', () => {
+        console.log('load')
+    })
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        console.log('DOMContentLoaded')
+    })
+
+    window.addEventListener('resize', () => {
+        console.log('resize', innerWidth, innerHeight)
+    })
+    
+    window.addEventListener('scroll', () => {
+        console.log('scroll', pageYOffset, pageXOffset)
+    })
+    
+    window.addEventListener('unload', () => {
+        console.log('unload')
+    })
+
+    window.addEventListener('beforeunload', () => {
+        console.log('beforeunload')
+    })
+
+    </script>
+</body>
+</html>

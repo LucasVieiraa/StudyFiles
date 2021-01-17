@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <style type="text/css">
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        li {
+            padding: 15px;
+            margin: 10px;
+            border: dashed 2px #ddd;
+        }
+
+        body {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ccc;
+            font-family: sans-serif;
+            text-align: center;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            width: 80vw;
+            height: 80vh;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+            padding: 15px;
+        }
+
+        .container>div {
+            flex-basis: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+
+
+
+        <div class="Estacionamento">  <h3>Estacionamento</h3>
+        <ul>
+
+               <li>Carro 1</li>
+               <li>Carro 2</li>
+               <li>Carro 3</li>      
+        </ul>
+        </div>
+
+
+
+
+        <div class="LavaRapido">  <h3>Lava Rapido</h3>
+        <ul> 
+            <li>Carro 1</li>
+        </ul>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <script type="text/javascript">
+		// 01 - crie um nova li com texto "Carro 2" e a inclua na ul de div com class Lava Rapido
+
+		// 02 - Mova a última li de Estacionamento para Lava Rapido (mas antes da primeira li). 
+        //Em outras palavras, a última li da Estacionamento deve virar a primeira li de Lava Rapido.
+
+		// 03 - altere o texto da primeira li de Lava Rapido para "Carro 0".
+
+		// 04 - clone a ul de Estacionamento e a inclua na primeira li de Lava Rapido
+
+		// 05 - remova a ultima li (Carro 2) da lista inserida na etapa anterior
+
+		// 06 - remova as duas li's que sobraram na ul Estacionamento
+
+
+    </script>
+     <script>
+        const UlEstacionamento = document.querySelector('.Estacionamento ul');
+        const UlLavaRapido = document.querySelector('.LavaRapido ul');
+
+         // 01
+         const li = document.createElement('li');
+         li.textContent = 'Carro 2';
+         UlLavaRapido.appendChild(li)
+
+         // 02
+         UlLavaRapido.insertBefore(UlEstacionamento.lastElementChild, UlLavaRapido.firstElementChild);
+
+         // 03
+         UlLavaRapido.firstElementChild.textContent = 'Carro 0';
+
+         // 04
+         const ulClone = UlEstacionamento.cloneNode(true);
+         UlLavaRapido.firstElementChild.appendChild(ulClone);
+
+         //05
+         ulClone.lastElementChild.remove()
+
+         //06
+         UlEstacionamento.innerHTML = '';
+         
+
+        </script>
+</body>
+
+</html>

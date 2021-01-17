@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div id='output'></div>
+    <title>Loops</title>  
+</head>
+<body>
+ <script>
+//----------------------------------------------------------------------- 
+//Loop while    
+let numero = prompt('Digite um numero: ');
+let indice = 0;
+while(indice <= 10){
+  document.write(`${indice} x ${numero} = ${(numero * indice)}<br>`)  
+indice++;
+}
+//----------------------------------------------------------------------- 
+//Loop do while
+let j = 11;
+do{ document.write(`->${j} x ${numero} = ${(numero * j)}<br>`)  
+j++;
+}while(j <= 10)
+
+//-----------------------------------------------------------------------
+//Loop For     
+let msg = ''; 
+
+let n = prompt('Digite um numero: ');
+for(let i = 0; i <= 10; i++){
+msg += `${i} x ${n} = ${(n * i)}<br>`;}
+
+let output = document.querySelector('#output').innerHTML = msg;
+//-----------------------------------------------------------------------
+ </script>   
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Teste DOM</h1>
+
+    <div class="container">
+        <p>teste 1</p>
+        <p>lorem <a href="#"> link </a> .</p>
+        <p>teste 2</p>
+
+        <h2>Lista</h2>
+        <ul>
+            <li>item 1</li>
+            <li>item 2
+                <ul>
+                    <li>item 2.a</li>
+                    <li>item 2.b</li>
+                    <li>item 2.c</li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>item <a href="#">link</a></li>
+        </ul>
+    </div>
+    <script>
+    //Criando um H1 com id, texto e cor atraves do DOM 
+
+        const title = document.createElement('h1');//.textContent = 'Testeasdasdasd';
+        const attribute = document.createAttribute('id');
+        attribute.value = 'title1';
+        title.setAttributeNode(attribute);
+
+        title.setAttribute('title', 'title inserido blablabla');
+        title.setAttribute('style', 'color: red;');
+
+        const text = document.createTextNode('criar nos no DOM');
+        title.appendChild(text)
+
+        title.textContent = 'Texto inserido com textContent'
+
+        console.log(title)
+
+            // document.body.appendChild(title);
+            // document.querySelector('.container').appendChild(title);
+            // document.querySelector('.container').append(title, 'texto novo');
+            // document.querySelector('.container').prepend(title, 'texto novo');
+            const title2 = document.createElement('h1');
+            title2.textContent = 'titulo 2';
+            const list = document.querySelector('ul');
+            // document.querySelector('.container').insertBefore(title2, list);
+
+            const container = document.querySelector('.cantainer');
+
+            container.insertBefore(title2, list);
+            container.insertBefore(title2, container.firstChild);
+
+            const sublevel = document.querySelector('ul ul');
+            sublevel = sublevel.cloneNode()
+
+            const h2 = document.querySelector('h2');
+
+            container.insertBefore(sublevel, h2.nextElementSibling)
+            
+            
+            
+            
+            
+            
+            
+            //APPENDCHILD(): & APPEND: Sempre ira colocar no final, depois do ultimo filho do elemento.
+            //PREPEND(): O prepend coloca antes do primeiro filho.
+            //INSERTBEFORE(): Recebe dois parametros, o novo filho e o filho referencia.
+            //CLONENODE(): Clona o elemento
+
+
+    </script>
+    </body>

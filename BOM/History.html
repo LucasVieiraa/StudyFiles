@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+</head>
+<body>
+    <h1>History</h1>
+    <button id="btnBack">Volta</button>
+    <br>
+    <button id="btnForward">Avanca</button>
+    <a href="http://google.com">google</a>
+    <script>
+        //history.back() - Retorna para pagina anterior caso exista
+        //history.forward() - Avanca para pagina seguinte caso exista
+        //history.go(-1) - Retorna para pagina anterior caso exista
+        //history.go(1) - Avanca para pagina seguinte caso exista
+
+
+        let forwardID = document.getElementById('btnForward')
+        let backID = document.getElementById('btnBack')
+
+        forwardID.addEventListener('click', () => {
+            history.forward()
+        });
+
+        backID.addEventListener('click', () => {
+            history.back()
+        });
+
+    </script>
+</body>
+</html>

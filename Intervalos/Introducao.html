@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*-------------------------------------------------------------------------------------------------------------------
+                                                 SETTIMEOUT()
+    setTimeout()// executa uma funcao depois de determinado milisegundo passado po parametro
+    setTimeout(funcao, milisegundo)
+    ex:setTimeout( function(){  console.log('abc')  }, 2000 )//executa a funcao anonima depois de 2 segundos
+*/
+
+        setTimeout(function(){
+            console.log('timeout depois de 2000ms')
+        }, 2000)
+
+
+/*-------------------------------------------------------------------------------------------------------------------
+                                                 SETINTERVAL()
+    setInterval()//executa uma funcao toda hora com um intervalo determinado por parametro
+    setInterval(funcao, milisegundo)
+    ex: setInterval( function(){  console.log('abc')  }, 1000 )//executa a funcao anonima repetidamente com intervalos
+    de 1 segundo
+*/
+
+    let n = 0
+        setInterval(function(){
+            // console.log('interval n: ', n++)
+        }, 1000)
+
+    
+
+/*-------------------------------------------------------------------------------------------------------------------
+                                                 CLEARINTERVAL()
+    clearInterval()//limpa o intervalo da funcao
+    clearInterval(nomeDaFuncaoArmazenadaNaVariavel)
+    ex: const exempLo = setInterval( function(){console.log(n++);if(n>5)    clearInterval(exempLo)  }, 1000 )
+*/                                                 
+
+    let x = 0
+    const intervalo = setInterval(() => {
+        console.log('contador segundos: ', x++)
+        if(x > 15)clearInterval(intervalo)
+    }, 1000)
+
+
+
+    </script>
+</body>
+</html>

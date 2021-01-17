@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Funcoes Tabuada</h1>
+
+      <button onclick='mostrarTabuada()'>Mostrar Tabuada</button>
+      <button onclick='limparTabuada()'>Limpar Tabuada</button>
+                     <div id="output"></div>
+
+<script>
+//---------------------------------------------------------------------    
+let output = document.getElementById("output");
+let msg = '';
+//---------------------------------------------------------------------  
+  function mostrarTabuada(){
+    msg = '';
+    let n1 = parseInt(prompt('Digite um numero'));
+     if(isNaN(n1)){
+     alert('Somente numeros'); 
+     return}
+    
+  
+  for(let i = 1; i <= 1000; i++){
+      let calculo = n1 * i;
+      msg += `${n1} x ${i} = ${calculo}<br>`;
+       if(i % 10 === 0 || i === 0){
+       msg += '<hr>';}
+       }
+      output.innerHTML = msg;}
+//---------------------------------------------------------------------
+  function limparTabuada(){
+   output.innerHTML = ''; }
+//---------------------------------------------------------------------   
+</script>
+</body>
+</html>
