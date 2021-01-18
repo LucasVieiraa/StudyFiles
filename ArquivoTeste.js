@@ -2,7 +2,7 @@
 
   let a = 3
   let b = 2
-
-  return console.log(a + b)
+  let msg = 'Resultado:'
+  return console.log(msg, a + b)
 
 })();
