@@ -34,7 +34,7 @@ const humano = {
   name: 'Lucas',
 
   falar(){//metodo novo
-    console.log('ola')
+    console.log(this.name, 'ola')
   },
   
   falar2(){//metodo novo
