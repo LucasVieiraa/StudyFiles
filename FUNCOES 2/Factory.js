@@ -37,7 +37,7 @@ function createDog(name){
       console.log(this.name, 'andou:', distance, 'mts')
     },
 
-    takePosition(){
+    get position(){
       console.log(`a posicao atual de ${this.name} e: ${position}`)
       return position
     }
@@ -47,11 +47,12 @@ function createDog(name){
 const rex = createDog('Rex')
 rex.walk(10)
 rex.walk(5)
-rex.takePosition()
+rex.position
+console.log(rex.position)
 
 console.log('----------------------------------')
 
 const toto = createDog('Toto')
 toto.walk(20)
 toto.walk(-3)
-toto.takePosition()
+toto.position
