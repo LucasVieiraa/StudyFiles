@@ -18,3 +18,8 @@ Animal.prototype.tipo = 'desconhecido'
   Cachorro.prototype.constructor = Cachorro
 
   let rex = new Cachorro('Rex', 'mamifero')
+  console.log(rex.constructor)
+  //funcao construtora neste caso e: Cachorro
+
+
+  //constructor: retorna a funcao construtora

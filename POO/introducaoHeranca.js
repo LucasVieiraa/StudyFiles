@@ -36,7 +36,7 @@ Ex: function Cachorro(nome, tipo){
 A funcao construtora Cachorro esta herdando tudo 
 
 //---------------------------------------------------------------------------------------------------------
-///ANOTAR NO CADERNO HERANCA(MANEIRA ESMACSRIPT 2015)
+///ANOTAR NO CADERNO HERANCA(MANEIRA ES 2015)
 
   Object.defineProperty(Cachorro.prototype, 'constructor', {
     value: Cachorro,
@@ -49,3 +49,9 @@ passar um objeto de configuracao.
   enumerable: (boolean: true(mostra no loop for in), false(nao mostra no loop for in))
 
 */
+
+//---------HERANCA-------
+//EXEMPLO CANETA AZUL
+
+//Tampa azul da caneta e o atributo(ATRIBUTO)
+//Funcao de escrever e um metodo(METODO)
