@@ -1,27 +1,30 @@
-  class AnimalC{
-    constructor(tipo){
-      if(tipo)  this.tipo = tipo
-    }
-
-    obterTipo(){
-      return this.tipo
-    }
+function Animal(tipo){ 
+  if(this instanceof Animal){
+    if(tipo) this.tipo = tipo
+  } else {
+    throw new Error('Animal nao pode ser criado sem o operador "new"')
   }
-  AnimalC.prototype.tipo = 'desconhecido'
+};
 
-  let animal = new AnimalC('anfibio')
-  let animal2 = new AnimalC()
-  console.log(animal.tipo)
-  console.log(animal2.tipo)
+Animal.prototype.obterTipo = function(){
+  return this.tipo
+}
+
+Animal.prototype.tipo = 'desconhecido'
 
 
-    class GatoC extends AnimalC{
-      constructor(nome){
-        super('mamifero')
-        this.nome = nome
-      }
-    }
+  function Cachorro(nome){
+    this.nome = nome
+    Animal.call(this, 'mamifero')
+    
+  };
+  
+  Cachorro.prototype = new Animal('mamifero')
+  Cachorro.prototype.constructor = Cachorro
+  
+  let rex = new Cachorro('rex', 'mamifero')
+ 
 
-    let mingal = new GatoC('mingal')
 
-    console.log(mingal)
+
+
