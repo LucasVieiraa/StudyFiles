@@ -41,4 +41,5 @@
 
 //'tipo' esta encapsulado
 //__________________________________________________________________________________________________________________
-//get => quando chamado se comporta como uma propriedade, mas dentro do obj e uma funcao
+//get => Se comporta como uma propriedade, mas dentro do obj e uma funcao. Usado para retornar um valor
+//set => Se comporta como uma propriedade, mas dentro do obj e uma funcao. Usado para alterar, definir um valor
