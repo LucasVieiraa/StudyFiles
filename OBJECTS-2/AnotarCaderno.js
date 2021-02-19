@@ -5,5 +5,7 @@ Metodos - OK
 Destructuring - OK
 Metodos2 - OK
 DeepFreeze - OK
-IsFrozen -
+IsFrozen - OK
+COMPUTED PROPERTY NAME - OK
+Symbol - 
 */
