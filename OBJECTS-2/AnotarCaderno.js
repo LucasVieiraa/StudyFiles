@@ -7,5 +7,7 @@ Metodos2 - OK
 DeepFreeze - OK
 IsFrozen - OK
 COMPUTED PROPERTY NAME - OK
-Symbol - 
+Symbol - OK
+SymbolAsProp - 
+SymbolAsProp2 - 
 */

@@ -13,9 +13,12 @@
     ['teste' + (++n)]: 'teste' + n,
     ['teste' + (++n)]: 'teste' + n,
     ['teste' + (++n)]: 'teste' + n,
+    ['teste' + (++n)]: 'teste' + n,
     [NOME]: 'Lucas - Symbol',
     nome: 'Lucas - String',
   }
+  
+//[]: maneira de usa os colchetes na propriedade de um objeto
 
 //-------------------------------------------------------------------------------------
 
@@ -26,6 +29,7 @@
   let acessarSymbol = Object.getOwnPropertySymbols(user)
   console.log(user[acessarSymbol[0]])
   user[acessarSymbol[0]] = 'novo nome Symbol'//Altera o value do Symbol
+  //user[NOME]: Acessa o value da propriedade symbol
 
 //-------------------------------------------------------------------------------------
 
