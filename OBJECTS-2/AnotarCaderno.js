@@ -8,6 +8,8 @@ DeepFreeze - OK
 IsFrozen - OK
 COMPUTED PROPERTY NAME - OK
 Symbol - OK
-SymbolAsProp - 
-SymbolAsProp2 - 
+SymbolAsProp - OK
+SymbolAsProp2 - OK
+WeakMap - 
+WEAKSET - 
 */
